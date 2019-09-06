@@ -1,0 +1,11 @@
+{
+    "path": "./data/census.csv",
+    "LogisticRegression": "FAlse",
+    "DecisionTreeClassifier": "false",
+    "RandomForestClassifier": "False",
+    "SupportVectorMachine": "False",
+    "KNeighborsClassifier": "FAlse",
+    "Deeplearningmodel": "false",
+    "predictneuralnet": "false",
+    "traintestnet": "True"
+}
