@@ -1,15 +1,15 @@
-2019-09-06 12:09:06,887 : WARNING : From G:\census_data\venv\lib\site-packages\keras\backend\tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+2019-09-07 12:34:03,478 : WARNING : From G:\census_data\venv\lib\site-packages\keras\backend\tensorflow_backend.py:66: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
 
-2019-09-06 12:09:06,887 : WARNING : From G:\census_data\venv\lib\site-packages\keras\backend\tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+2019-09-07 12:34:03,479 : WARNING : From G:\census_data\venv\lib\site-packages\keras\backend\tensorflow_backend.py:541: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
 
-2019-09-06 12:09:06,887 : WARNING : From G:\census_data\venv\lib\site-packages\keras\backend\tensorflow_backend.py:4409: The name tf.random_normal is deprecated. Please use tf.random.normal instead.
+2019-09-07 12:34:03,480 : WARNING : From G:\census_data\venv\lib\site-packages\keras\backend\tensorflow_backend.py:4409: The name tf.random_normal is deprecated. Please use tf.random.normal instead.
 
-2019-09-06 12:09:06,996 : WARNING : From G:\census_data\venv\lib\site-packages\keras\optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+2019-09-07 12:34:03,513 : WARNING : From G:\census_data\venv\lib\site-packages\keras\optimizers.py:793: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
 
-2019-09-06 12:09:07,012 : WARNING : From G:\census_data\venv\lib\site-packages\keras\backend\tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
+2019-09-07 12:34:03,519 : WARNING : From G:\census_data\venv\lib\site-packages\keras\backend\tensorflow_backend.py:3576: The name tf.log is deprecated. Please use tf.math.log instead.
 
-2019-09-06 12:09:07,390 : WARNING : From G:\census_data\venv\lib\site-packages\tensorflow\python\ops\math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+2019-09-07 12:34:03,593 : WARNING : From G:\census_data\venv\lib\site-packages\tensorflow\python\ops\math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
 Instructions for updating:
 Use tf.where in 2.0, which has the same broadcast rule as np.where
-2019-09-06 12:09:07,478 : WARNING : From G:\census_data\venv\lib\site-packages\keras\backend\tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
+2019-09-07 12:34:03,635 : WARNING : From G:\census_data\venv\lib\site-packages\keras\backend\tensorflow_backend.py:1033: The name tf.assign_add is deprecated. Please use tf.compat.v1.assign_add instead.
 

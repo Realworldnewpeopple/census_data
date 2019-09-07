@@ -12,22 +12,17 @@ from keras.layers import Dropout
 from keras.optimizers import SGD
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import OneHotEncoder
 
 def get_data(path):
     df = pd.read_csv(path)
     return df
-
 
 def cat_num(data):
     df = data
     categorical_cols=df.columns[df.dtypes==object].tolist()
     le = LabelEncoder()
     df[categorical_cols] = df[categorical_cols].apply(lambda col: le.fit_transform(col))
-    return df
-
-def preprocess_data(data):
-    df = data
-    df[df.drop('income', axis=1).columns] = preprocessing.scale(df.drop('income', axis=1))
     return df
 
 def scaling_data(data):
@@ -37,9 +32,14 @@ def scaling_data(data):
     normalized_data=pd.DataFrame(normalized,columns=list(data.columns))
     return normalized_data
 
-def train_test_split_data(df):
-    x = df.drop('income', axis=1).to_numpy()
-    y = df['income']
+def one_hot_encode(df):
+    y = df.pop(df.columns[-1])
+    x = df
+    ohe = OneHotEncoder(sparse=False)
+    X_ohe = ohe.fit_transform(x)
+    return X_ohe,y
+
+def train_test_split_data(x,y):
     X_train, X_test, y_train, y_test = train_test_split(
         x, y, test_size=0.2)
     return X_train, X_test, y_train, y_test
@@ -77,10 +77,10 @@ def freq_dist(df):
 def base_neural_model(X_train, X_test, y_train, y_test):
     opt = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
     model = Sequential([
-        Dense(400, activation='relu',
+        Dense(800, activation='relu',
               input_dim=X_train.shape[1], kernel_initializer='random_normal'),
         Dense(400, activation='relu', kernel_initializer='random_normal'),
-        Dense(300, activation='relu', kernel_initializer='random_normal'),
+        Dense(800, activation='relu', kernel_initializer='random_normal'),
         Dense(2, activation='softmax', kernel_initializer='random_normal'), ])
     model.compile(
         optimizer=opt,

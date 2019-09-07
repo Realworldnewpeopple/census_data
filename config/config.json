@@ -6,6 +6,5 @@
     "SupportVectorMachine": "False",
     "KNeighborsClassifier": "FAlse",
     "Deeplearningmodel": "false",
-    "predictneuralnet": "false",
     "traintestnet": "True"
 }

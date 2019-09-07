@@ -7,10 +7,11 @@ from src import census
 
 def main(config):
     data = census.cat_num(census.get_data(config['path']))
-    data=census.scaling_data(data)
     census.freq_dist(data)
+    #data=census.scaling_data(data)
+    x,y=census.one_hot_encode(data)
     X_train, X_test, y_train, y_test = census.train_test_split_data(
-        data)
+        x,y)
     model_gr = models(X_train, X_test, y_train, y_test)
     if config['LogisticRegression'] == "True":
         regression, cross1 = model_gr.regression()
